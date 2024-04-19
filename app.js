@@ -73,10 +73,10 @@ inputBox.forEach(function (input) {
     })
 
     input.addEventListener('input', (evt) => {
-        // if(allGoals[input.id].completed){
-        //     input.value = allGoals[input.id].name
-        //     return;
-        // }
+        if(allGoals[input.id].completed){
+            input.value = allGoals[input.id].name
+            return;
+        }
         allGoals[evt.target.id] = {
             name: evt.target.value,
             completed: false,
